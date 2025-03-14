@@ -1,7 +1,6 @@
 # Ubuntu
 
 ```bash
-wget https://raw.githubusercontent.com/Altione/OTUS/refs/heads/main/ELK/Script-ELK.sh
+wget https://github.com/shchepalin/Ubuntu/blob/main/Monitoring.sh
 chmod +x Script-ELK.sh
 ./Script-ELK.sh
-```

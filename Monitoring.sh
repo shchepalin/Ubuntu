@@ -2,7 +2,7 @@
 apt install prometheus -y
 
 #Grafana installation
-scp -r alex@192.168.1.100:/home/Alex/Distr/*.deb /home/Alex/
+scp -r alex@192.168.1.100:/home/alex/Distr/*.deb /home/alex/
 sleep 3;
 sudo apt-get install -y adduser libfontconfig1 musl
 sudo dpkg -i grafana-enterprise_11.5.2_amd64.deb

@@ -25,11 +25,11 @@ dpkg -i *.deb;
 echo -e "-Xms1g\n-Xmx1g" | sudo cat > /etc/elasticsearch/jvm.options.d/jvm.options;
 
 ### Download configs
-wget https://raw.githubusercontent.com/Altione/OTUS/refs/heads/main/ELK/elasticsearch.yml;
-wget https://raw.githubusercontent.com/Altione/OTUS/refs/heads/main/ELK/filebeat.yml;
-wget https://raw.githubusercontent.com/Altione/OTUS/refs/heads/main/ELK/kibana.yml;
-wget https://raw.githubusercontent.com/Altione/OTUS/refs/heads/main/ELK/logstash.yml;
-wget https://raw.githubusercontent.com/Altione/OTUS/refs/heads/main/ELK/logstash-nginx-es.conf;
+wget https://github.com/shchepalin/Ubuntu/blob/main/elasticsearch.yml;
+wget https://github.com/shchepalin/Ubuntu/blob/main/filebeat.yml;
+wget https://github.com/shchepalin/Ubuntu/blob/main/kibana.yml;
+wget https://github.com/shchepalin/Ubuntu/blob/main/logstash.yml;
+wget https://github.com/shchepalin/Ubuntu/blob/main/logstash-nginx-es.conf;
 
 
 ### Copy configs

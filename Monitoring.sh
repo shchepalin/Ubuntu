@@ -2,7 +2,7 @@
 apt install prometheus -y
 
 #Grafana installation
-scp -r Alex@192.168.1.100:/home/Alex/Distr/*.deb /home/Alex/
+scp -r alex@192.168.1.100:/home/Alex/Distr/*.deb /home/Alex/
 sleep 3;
 sudo apt-get install -y adduser libfontconfig1 musl
 sudo dpkg -i grafana-enterprise_11.5.2_amd64.deb
@@ -25,11 +25,11 @@ dpkg -i *.deb;
 echo -e "-Xms1g\n-Xmx1g" | sudo cat > /etc/elasticsearch/jvm.options.d/jvm.options;
 
 ### Download configs
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml/elasticsearch.yml;
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml/filebeat.yml;
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml/kibana.yml;
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml/logstash.yml;
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml/logstash-nginx-es.conf;
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
 
 
 ### Copy configs

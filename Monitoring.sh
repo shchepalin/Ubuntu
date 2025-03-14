@@ -1,16 +1,16 @@
 ### Prometheus installation
-apt install prometheus -y;
+apt install prometheus -y
 
 #Grafana installation
 scp -r Alex@192.168.1.100:/home/Alex/Distr/*.deb /home/Alex/
-sleep 3;
+sleep 3
 sudo apt-get install -y adduser libfontconfig1 musl
 sudo dpkg -i grafana-enterprise_11.5.2_amd64.deb
 
 #Starting Grafana
 systemctl daemon-reload;
 echo "Starting Grafana"
-systemctl start grafana-server;
+systemctl start grafana-server
 
 ### Change Hostname
 sudo hostnamectl set-hostname ELK-Grafana && sudo sed -i "s/^127.0.1.1 .*/127.0.1.1 ELK-Grafana/" /etc/hosts && echo "✅ Hostname is $(hostname)"

@@ -1,3 +1,4 @@
+#!/bin/bash
 ### Prometheus installation
 apt install prometheus -y
 

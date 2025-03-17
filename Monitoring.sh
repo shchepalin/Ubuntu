@@ -26,10 +26,10 @@ echo -e "-Xms1g\n-Xmx1g" | sudo cat > /etc/elasticsearch/jvm.options.d/jvm.optio
 
 ### Download configs
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/elasticsearch.yml;
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/filebeat.yml;
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/kibana.yml;
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/logstash.yml;
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/logstash-nginx-es.conf;
 
 
 ### Copy configs

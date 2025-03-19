@@ -25,6 +25,10 @@ chmod +x BackupBD.sh
 ```
 
 ```bash
+scp -r /home/alex/DB alex@192.168.1.100:/home/alex/DB
+```
+
+```bash
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/Monitoring.sh
 chmod +x Monitoring.sh
 ./Monitoring.sh

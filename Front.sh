@@ -1,6 +1,6 @@
 ### Nginx installation
 apt install nginx -y;
-sleep (3);
+sleep 3;
 apt install prometheus -y;
 
 ### Site
@@ -10,7 +10,7 @@ cp nginx-sites-available /etc/nginx/sites-available/default;
 ###  nginx restart
 systemctl restart nginx;
 
-sleep(5);
+sleep 5;
 
 ###Filebeat installation
 scp -r Alex@192.168.1.100:/home/alex/Distr/filebeat_8.9.1_amd64-224190-bc3f59.deb /home/alex/

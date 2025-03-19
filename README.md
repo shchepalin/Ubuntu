@@ -19,6 +19,12 @@ chmod +x Replica.sh
 ```
 
 ```bash
+wget https://raw.githubusercontent.com/Altione/OTUS/refs/heads/main/BackupBD.sh
+chmod +x BackupBD.sh
+./BackupBD.sh
+```
+
+```bash
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/Monitoring.sh
 chmod +x Monitoring.sh
 ./Monitoring.sh

@@ -7,6 +7,12 @@ chmod +x Front.sh
 ```
 
 ```bash
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/Source.sh
+chmod +x Source.sh
+./Source.sh
+```
+
+```bash
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/Monitoring.sh
 chmod +x Monitoring.sh
 ./Monitoring.sh

@@ -60,7 +60,7 @@ scp -r alex@192.168.1.100:/home/alex/DB /home/alex/DB
 ```
 - Ресторим базы
 ```bash
-for file in /home/altione/DB/DB/WP/*; do
+for file in /home/alex/DB/DB/WP/*; do
     mysql -u root WP < "$file"
 done
 ```

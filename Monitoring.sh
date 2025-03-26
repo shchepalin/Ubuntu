@@ -1,5 +1,7 @@
 ### Prometheus installation
 apt install prometheus -y
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/prometheus.yml
+cp prometheus.yml /etc/prometheus/prometheus.yml;
 
 #Grafana installation
 scp -r alex@192.168.1.100:/home/alex/Distr/*.deb /home/alex/
@@ -30,7 +32,7 @@ wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/filebea
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/kibana.yml;
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/logstash.yml;
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/logstash-nginx-es.conf;
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/prometheus.yml
+
 
 
 ### Copy configs
@@ -39,7 +41,7 @@ cp filebeat.yml /etc/filebeat/filebeat.yml;
 cp kibana.yml /etc/kibana/kibana.yml;
 cp logstash.yml /etc/logstash/logstash.yml;
 cp logstash-nginx-es.conf /etc/logstash/conf.d/logstash-nginx-es.conf;
-cp prometheus.yml /etc/prometheus/prometheus.yml;
+
 
 ### Starting ELK
 systemctl daemon-reload;

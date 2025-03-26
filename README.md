@@ -1,4 +1,11 @@
-# Ubuntu
+# инструкция восстановления серверов после сбоя
+- Есть четыре сервера
+| IP            | Имя        | Пакеты          |
+| ------------- | ---------- | ----------------|
+| 172.16.10.109 | Front      | NGINX           |
+| 172.16.10.110 | Source     | Apache2 + MySQL |
+| 172.16.10.111 | Replica    | Apache2 + MySQL |
+| 172.16.10.112 | Monitor    | ELK + Grafana   |
 
 ```bash
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/Front.sh

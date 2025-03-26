@@ -39,23 +39,57 @@ chmod +x Replica.sh
 ```
 - Устанавливается Apache2
 - Устанавливается mysql
-- Настраивается как Replicaи стартует репликация
+- Настраивается как Replica и стартует репликация
 - Устанавливается PHP
 - Устанавливается Wordpress и копируется в апач
-- Создается база WP
-
+- Проверяем статус репликации
 ```bash
-wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/BackupBD.sh
-chmod +x BackupBD.sh
-./BackupBD.sh
+mysql -u root -e "show replica status\G"
 ```
-
+# 4. Настройка Wordpress (На Source)
+- http://192.168.1.102/wp-admin/install.php
+- Логин/пароль admin/password
+- Проверяем репликацию на Replica:
 ```bash
-scp -r /home/alex/DB alex@192.168.1.100:/home/alex/DB
+mysql -u root -e "show databases;"
 ```
-
+# 5. Восстановление БД из бэкапа
+- Копируем БД с резервного сервера:
+```bash
+scp -r alex@192.168.1.100:/home/alex/DB /home/alex/DB
+```
+- Ресторим базы
+```bash
+for file in /home/altione/DB/DB/WP/*; do
+    mysql -u root WP < "$file"
+done
+```
+- Проверяем WP по адресу http://192.168.1.101 и балансировку
+# 6. Восстанавливаем работу машины Monitoring
 ```bash
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/Monitoring.sh
 chmod +x Monitoring.sh
 ./Monitoring.sh
 ```
+- Устанавливается Prometheus и Grafana
+- Устанавливается ELK
+- Все это конфигурируется
+- Проверяем Grafana по адресу:
+
+- Проверяем Grafana по адресу:
+
+# 7. Бэкап БД 
+- Бэкап
+```bash
+wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/BackupBD.sh
+chmod +x BackupBD.sh
+./BackupBD.sh
+```
+- Копирование на Recover
+```bash
+scp -r /home/alex/DB alex@192.168.1.100:/home/alex/DB
+```
+
+
+
+

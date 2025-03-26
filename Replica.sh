@@ -27,11 +27,6 @@ tar -xzvf wordpress-6.7.1-ru_RU.tar.gz;
 ### copy to Apache
 cp -r wordpress/* /var/www/html/;
 
-### create db
-mysql -u root -e "CREATE DATABASE WP;";
-mysql -u root -e "CREATE USER 'wp'@'%' IDENTIFIED BY 'password';";
-mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'wp'@'%';";
-
 ### wp-config
 wget https://raw.githubusercontent.com/shchepalin/Ubuntu/refs/heads/main/wp-config.php
 cp wp-config.php /var/www/html/;

@@ -15,7 +15,7 @@ echo "Starting Grafana"
 systemctl start grafana-server
 
 ### Change Hostname
-sudo hostnamectl set-hostname ELK-Grafana && sudo sed -i "s/^127.0.1.1 .*/127.0.1.1 ELK-Grafana/" /etc/hosts && echo "✅ Hostname is $(hostname)"
+#sudo hostnamectl set-hostname ELK-Grafana && sudo sed -i "s/^127.0.1.1 .*/127.0.1.1 ELK-Grafana/" /etc/hosts && echo "✅ Hostname is $(hostname)"
 
 ### Java installation
 apt install default-jdk -y;
